@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: white;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    background-color: white;
+    height: 2px;
+    border: none;
+    margin: 10px 0;
+}
