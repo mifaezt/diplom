@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Маршрут показ формы welcomeBlade
 Route::get('/', function () {
     return view('welcome');
 })->name('home');

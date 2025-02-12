@@ -1,0 +1,170 @@
+/* Нормалайз блочной моделли */
+@import url("normalize.css");
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-Light.woff2") format("woff2");
+    font-weight: light;
+    font-style: normal;
+    font-display: swap; /*отрисовка если не загружен*/
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap; /*отрисовка если не загружен*/
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /*отрисовка если не загружен*/
+}
+
+:root {
+    --color-dark-grey: #1a1f23;
+    --color-light: #ffffff;
+    --color-dark: #000000;
+
+    --border-radius: 30px;
+    --border: 1px solid var(--color-light);
+
+    --font-family-base: "Rubik", sans-serif;
+    /* Высота кнопоок */
+    --input-height: 54px;
+    /* Ширина основного контейнера */
+    --container-width: 1300px;
+    /* Горизонтальные внутренние отступы */
+    --container-padding-x: 15px;
+    /* Плавность интерактивных элементов */
+    --transition-duration: 0.2s;
+}
+
+body {
+    background-color: var(--color-dark-grey);
+    font-family: var(--font-family-base);
+    /* шрифт */
+    color: var(--color-light);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.container {
+    /* реальные ограничения сетки в 1300px */
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    /* центрируем по горизонтали */
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.form-container {
+    background-color: #00000085;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form-group button:hover {
+    background-color: #218838;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+    /* все заглавные */
+    /* text-transform: uppercase; */
+}
+
+.navbar {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: white;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.slogan {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.social-icons {
+    max-height: 80px;
+    max-width: 80px;
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    background-color: white;
+    height: 2px;
+    border: none;
+    margin: 10px 0;
+}
