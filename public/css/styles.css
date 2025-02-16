@@ -61,6 +61,21 @@ body {
     padding-inline: var(--container-padding-x);
 }
 
+.is-invalid {
+    border: 1px solid red;
+    background-color: pink;
+}
+
+.alert-danger {
+    border: 1px solid red;
+    background-color: pink;
+}
+
+.alert-success {
+    border: 1px solid rgb(58, 247, 0);
+    background-color: pink;
+}
+
 .form-container {
     background-color: #00000085;
     padding: 20px;

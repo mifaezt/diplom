@@ -8,21 +8,47 @@
 <div class="container">
     <div class="form-container">
         <h2>Вход</h2>
-        <form>
+        <form method='post' action='{{route("user.store")}}'>
+        @csrf
             <div id="name" class="form-group">
-                <input type="text" placeholder="Имя" name = "name" required>
+                <input 
+                type="text" 
+                placeholder="Имя" 
+                name = "name"
+                class="@error('name') is-invalid
+                @enderror" 
+                required>
             </div>
 
             <div class="form-group">
-                <input type="email" placeholder="Почта" name = "email" required>
+                <input 
+                type="email" 
+                placeholder="Почта" 
+                name = "email" 
+                class="@error('email') is-invalid
+                @enderror" 
+                required>
             </div>
 
             <div class="form-group">
-                <input type="phone" placeholder="Телефон" name = "phone" required>
+                <input 
+                type="phone" 
+                placeholder="Телефон" 
+                name = "phone" 
+                class="@error('phone') is-invalid
+                @enderror" 
+                required>
             </div>
 
             <div class="form-group">
-                <input type="password" placeholder="Пароль" name = "password" required>
+                <input 
+                type="password" 
+                placeholder="Пароль" 
+                name = "password"
+                id="password"
+                class="@error('password') is-invalid
+                @enderror"  
+                required>
             </div>
 
             <div class="form-group">

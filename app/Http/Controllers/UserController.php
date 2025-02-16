@@ -9,6 +9,14 @@ class UserController extends Controller
     
     //Функция dd, выводим данные на экран, блокируем (Dump and die)
     public function store(Request $request ) {
+        // Валидация при отправке формы
+        $request->validate([
+            'name' => ['required', 'max:255'],
+            'phone' => ['required', 'max:255'],
+            'email' => ['required', 'max:255', 'email', 'unique:users'],
+            'password' => ['required', 'confirmed', 'min:4'],
+        ]);
+
         dd($request->all());
     }
 
