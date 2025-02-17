@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -20,9 +22,12 @@ class UserController extends Controller
 
         //создаем пользователя
        $user = User::create($request->all());
-
+        // Создаем событие регистрации
+       event(new Registered($user));
+        // Логиним юзера
+        Auth::login($user);
         // dd($request->all());
-        return redirect()->route('login')->with('success', 'Регистрация прошла успешно');
+        return redirect()->route('verification.notice')->with('success', 'Регистрация прошла успешно');
     }
 
     //Вид регистрации
@@ -38,6 +43,18 @@ class UserController extends Controller
     //Вид онас
     public function about() {
         return view('about');
+    }
+
+    //Вид кабинет 
+    public function userCabinet() {
+        return view('user.userCabinet');
+    }
+
+    // логаут
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
     }
 
 }

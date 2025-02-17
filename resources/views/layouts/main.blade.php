@@ -35,7 +35,14 @@
           <!-- Условия маршрутов -->
           @if (Route::has('login'))
             @auth
-            <li><a href="{{ route('#') }}">Личный кабинет</a></li>
+              <li><a href="{{ route('home') }}">Главная страница</a></li>
+              <li><a href="{{ route('about') }}">О нас</a></li>
+              <li><a href="{{ route('home') }}">Контакты</a></li>
+              <li><a href="{{ route('home') }}">Правила проживания</a></li>
+              <li><a href="{{ route('home') }}">Цены</a></li>
+              <li><a href="{{ route('home') }}">Чем заняться</a></li>
+              <li><a href="{{ route('home') }}">Новости</a></li>
+              <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
             @else
               <li><a href="{{ route('home') }}">Главная страница</a></li>
               <li><a href="{{ route('about') }}">О нас</a></li>
