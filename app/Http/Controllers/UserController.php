@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -17,7 +18,11 @@ class UserController extends Controller
             'password' => ['required', 'confirmed', 'min:4'],
         ]);
 
-        dd($request->all());
+        //создаем пользователя
+       $user = User::create($request->all());
+
+        // dd($request->all());
+        return redirect()->route('login')->with('success', 'Регистрация прошла успешно');
     }
 
     //Вид регистрации

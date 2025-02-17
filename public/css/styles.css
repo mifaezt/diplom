@@ -143,12 +143,14 @@ h6 {
 }
 
 .social-icons {
-    height: 50px;
-    width: 50px;
     display: flex;
-    gap: 15px;
+    /* gap: 15px; */
 }
 
+.social-icons a {
+    height: 50px;
+    width: 50px;
+}
 .icon {
     color: white;
     text-decoration: none;

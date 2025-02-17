@@ -18,6 +18,9 @@
                 class="@error('name') is-invalid
                 @enderror" 
                 required>
+                @error('name')
+
+                @enderror
             </div>
 
             <div class="form-group">
@@ -49,10 +52,11 @@
                 class="@error('password') is-invalid
                 @enderror"  
                 required>
+                
             </div>
 
             <div class="form-group">
-                <input type="password_confirmation" placeholder="Повторите пароль" required>
+                <input name="password_confirmation" type="password" id="password_confirmation" placeholder="Повторите пароль">
             </div>
 
             <div class="form-group">
@@ -65,5 +69,6 @@
         </form>
     </div>
 </div>
+
 
 @endsection
