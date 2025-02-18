@@ -24,6 +24,9 @@ Route::middleware('guest')->group(function(){
 
     // Маршрут показ формы входа
     Route::get("login", [App\Http\Controllers\UserController::class, 'login'])->name('login');
+    // действие из формы
+    Route::post('login', [App\Http\Controllers\UserController::class, 'loginAuth'])->name('login.auth');
+
 
 });
 

@@ -9,20 +9,21 @@
 <div class="container">
     <div class="form-container">
         <h2>Вход</h2>
-        <form>
+        <form action="{{route("login.auth")}}" method="post">
+            @csrf
             <div class="form-group">
-                <input type="email" placeholder="Почта" required>
+                <input id="email"  name="email"  type="email" placeholder="Почта" required>
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Пароль" required>
+                <input id="password" name="password" type="password" placeholder="Пароль" required>
             </div>
             <div class="form-group">
                 <button type="submit">Войти</button>
             </div>
 
 
-                <label for="checkbox">Запомнить пароль</label>
-                <input id="checkbox" type="checkbox">
+                <label for="remember">Запомнить пароль</label>
+                <input name="remember" id="remember" type="checkbox">
 
             <div class="link">
                 <p>Нет аккаунта? <a href="{{ route('register') }}">Зарегистрироваться</a></p>

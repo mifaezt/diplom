@@ -57,4 +57,25 @@ class UserController extends Controller
         return redirect()->route('login');
     }
 
+    public function loginAuth(Request $request) {
+                // Валидация 
+                $credentials = $request->validate([
+                    'email' => ['required', 'email'],
+                    'password' => ['required',],
+                    ]);
+                //    Запуск сессии при успшной аут
+                if (Auth::attempt($credentials,$request->boolean('remember') )) {
+                    $request->session()->regenerate();
+                    return redirect()->intended('userCabinet')->with('success', 'Добро пожаловать, ' . Auth::user()->name . '!');
+                }
+
+                 // Проверка
+                return back()->withErrors([
+                    'email' => 'Неверный логин или пароль',
+                ]);
+
+        // dump($request->boolean('remember'));
+        // dd($request->all());
+    }
+
 }
