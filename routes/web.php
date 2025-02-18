@@ -26,8 +26,18 @@ Route::middleware('guest')->group(function(){
     Route::get("login", [App\Http\Controllers\UserController::class, 'login'])->name('login');
     // действие из формы
     Route::post('login', [App\Http\Controllers\UserController::class, 'loginAuth'])->name('login.auth');
+    // форма забыл пароль
+    Route::get('forgot-password', function () {
+        return view('user.forgot-password');
+    })->name('password.request');
 
+    Route::post('forgot-password', [App\Http\Controllers\UserController::class, 'forgotPasswordStore'])->middleware('throttle:3,1')-> name('password.email');
 
+    Route::get('/reset-password/{token}', function (string $token) {
+        return view('user.reset-password', ['token' => $token]);
+    })->middleware('guest')->name('password.reset');
+
+    Route::post('reset-password', [App\Http\Controllers\UserController::class, 'resetPasswordUpdate'])->name('password.update');
 });
 
 // Группировка изподлогирования

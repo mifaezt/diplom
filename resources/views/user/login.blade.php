@@ -27,6 +27,7 @@
 
             <div class="link">
                 <p>Нет аккаунта? <a href="{{ route('register') }}">Зарегистрироваться</a></p>
+                <a href="{{ route('password.request') }}" >Забыл?</a>
             </div>
         </form>
     </div>
