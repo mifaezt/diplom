@@ -12,6 +12,7 @@
 
 						<form method="post" action="{{route('password.update')}}">
 						@csrf
+            <!-- скрытое поле для токена -->
 						<input type="hidden" name="token" value="{{$token}}">
             <div class="mb-3">
 							<label for="email" class="form-label">Email</label>

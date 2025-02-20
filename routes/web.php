@@ -63,6 +63,9 @@ Route::middleware('auth')->group(function () {
     // Маршрут кабинета
     Route::get('userCabinet', [App\Http\Controllers\UserController::class, 'userCabinet'])->middleware('verified')->name('userCabinet');
 
+
     // выход из аккаунта
     Route::get('logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 });
+
+Route::get('adminPage', [App\Http\Controllers\UserController::class, 'adminPage'])->name('adminPage');

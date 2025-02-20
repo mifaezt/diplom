@@ -53,6 +53,10 @@ class UserController extends Controller
         return view('user.userCabinet');
     }
 
+    public function adminPage() {
+        return view('adminPage');
+    }
+
     // логаут
     public function logout()
     {

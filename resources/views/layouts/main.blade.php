@@ -9,10 +9,21 @@
 </head>
 <body>
  
+
+<header class="header">
+
+
+
+<header class="header">
 <nav class="navbar">
         <div class="navbar-content">
             <a href="{{ route('home') }}" >
-              <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo">
+              <img class="logo" 
+              src="{{ asset('images/logo.png') }}"  
+              alt="Jarviranta logo"
+              width="120"
+              height="120"
+              loading="lazy">
             </a>
             <div class="slogan"> <h1>Ваш идеальный отдых начинается здесь <br> уют, природа и комфорт под одной крышей! </h1></div>
             <div class="social-icons">
@@ -31,7 +42,9 @@
             </div>
         </div>
         <hr class="divider">
-        <ul class="nav-links">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
           <!-- Условия маршрутов -->
           @if (Route::has('login'))
             @auth
@@ -43,6 +56,9 @@
               <li><a href="{{ route('home') }}">Чем заняться</a></li>
               <li><a href="{{ route('home') }}">Новости</a></li>
               <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
+              @if (auth()->user()->name === 'admin') <!-- Проверка по имени пользователя -->
+                <li><a href="{{ route('adminPage') }}">Административная панель</a></li>
+            @endif
             @else
               <li><a href="{{ route('home') }}">Главная страница</a></li>
               <li><a href="{{ route('about') }}">О нас</a></li>
@@ -56,7 +72,7 @@
           @endif
         </ul>
     </nav>
-
+    </header>
 <!-- Основной контент -->
 <main>
   <div class="container">
