@@ -4,5 +4,10 @@
 @section('title', 'Jarviranta')
 
 @section('content')
-HomePAge
+<div class="homeImage">
+    <div class="homeSlogan">
+        <h1>Отдохните от суеты в гостевом А-фрейм домике на берегу живописного озера в Карелии!</h1>
+        
+    </div>
+</div>
 @endsection

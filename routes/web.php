@@ -68,4 +68,11 @@ Route::middleware('auth')->group(function () {
     Route::get('logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 });
 
-Route::get('adminPage', [App\Http\Controllers\UserController::class, 'adminPage'])->name('adminPage');
+// Маршрут в админпанель с проверкой
+Route::get('adminPage', function () {
+    if (auth()->check() && auth()->user()->email === 'mifaezt@gmail.com') { 
+        return app(App\Http\Controllers\UserController::class)->adminPage();
+    }
+
+    return redirect()->route('home')->with('error', 'Доступ запрещен');
+})->name('adminPage');

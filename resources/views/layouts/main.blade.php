@@ -9,11 +9,6 @@
 </head>
 <body>
  
-
-<header class="header">
-
-
-
 <header class="header">
 <nav class="navbar">
         <div class="navbar-content">
@@ -56,7 +51,7 @@
               <li><a href="{{ route('home') }}">Чем заняться</a></li>
               <li><a href="{{ route('home') }}">Новости</a></li>
               <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
-              @if (auth()->user()->name === 'admin') <!-- Проверка по имени пользователя -->
+              @if (auth()->user()->email === 'mifaezt@gmail.com') <!-- доппроверка для ссылки -->
                 <li><a href="{{ route('adminPage') }}">Административная панель</a></li>
             @endif
             @else

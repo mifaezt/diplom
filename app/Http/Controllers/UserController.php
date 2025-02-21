@@ -33,6 +33,14 @@ class UserController extends Controller
         return redirect()->route('verification.notice')->with('success', 'Регистрация прошла успешно');
     }
 
+
+    //Проверка админа
+    // public function isAdmin()
+    // {
+    //     return auth()->user()->email === 'mifaezt@gmail.com';
+    // }
+    
+
     //Вид регистрации
     public function create() {
         return view('user.create');

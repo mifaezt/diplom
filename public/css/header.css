@@ -84,13 +84,15 @@
 .header {
     background-color: #0000006b;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
+    /* position: relative; */
     width: 100%;
 }
+
 .header ul {
     list-style: none;
     overflow: hidden;
 }
+
 .header li a {
     display: block;
     padding: 10px 10px;
@@ -160,6 +162,7 @@
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
+
 /* 48em = 768px */
 @media (min-width: 48em) {
     .header li {
