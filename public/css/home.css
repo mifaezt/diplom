@@ -1,6 +1,58 @@
 .homeImage {
-    height: 100vh;
-    background-image: url(/public/images/logo.png);
+    height: 100%;
+    background-image: url("/images/buckground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10% 0 10% 0;
+}
+
+.homeSlogan {
+    width: 600px;
+    background: #0000007e;
+    padding-left: 40px;
+    padding: 20px 40px 20px 40px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.button-link {
+    display: inline-block; /* Чтобы элементы отображались как кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    color: white; /* Цвет текста */
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid white; /* Белая рамка */
+    border-radius: 10px; /* Скругленные углы */
+    text-align: center; /* Центрирование текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 16px; /* Размер шрифта по вашему выбору */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
+}
+
+.button-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Задний фон при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+.button-link-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.serviceComponent {
+    display: flex;
+}
+
+.serviceIcon {
+    height: 100px;
+    width: 100px;
+}
+
+.serviceFirstBlock {
+    display: flex;
+}
+.serviceSecondBlock {
+    display: flex;
+    flex-direction: column;
 }

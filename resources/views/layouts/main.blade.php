@@ -94,10 +94,71 @@
                 {{ session('message') }}
             </div>
         @endif
-
+        </div>
     @yield('content')
-  </div>
+
 </main>
+
+<footer>
+
+        <div>
+          <a href="{{ route('home') }}" >
+              <img class="logo" 
+              src="{{ asset('images/logo.png') }}"  
+              alt="Jarviranta logo"
+              width="120"
+              height="120"
+              loading="lazy">
+            </a>
+          </div>
+
+        <div>
+          <ul>
+            <li><a href="{{ route('about') }}">О нас</a></li>
+            <li><a href="{{ route('home') }}">Правила проживания</a></li>
+            <li><a href="{{ route('home') }}">Цены</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li><a href="{{ route('home') }}">Чем заняться</a></li>
+            <li><a href="{{ route('home') }}">Новости</a></li>
+            <li><a href="{{ route('home') }}">Правила проживания</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li><a href="{{ route('home') }}">Дом внутри</a></li>
+            <li><a href="{{ route('home') }}">Дом снаружи</a></li>
+            <li><a href="{{ route('home') }}">Очень ждем вас в гости!</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="social-icons">
+            <a href="https://vk.com/" target="_blank" class="icon">
+              <img src="{{ asset('icons/vk.png') }}"  alt="vk">
+            </a>
+            <a href="https://blog.whatsapp.com/whats-app-web?lang=ru_RU" target="_blank" class="icon">
+              <img src="{{ asset('icons/whatsapp.png') }}" alt="whatsupp">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="icon">
+              <img src="{{ asset('icons/instagram.png') }}" alt="instagram">
+            </a>
+            <a href="https://web.telegram.org/" target="_blank" class="icon">
+              <img src="{{ asset('icons/telegram.png') }}" alt="telegram">
+            </a>
+          </div>
+          <a href="#">
+          <h2>Jarvira.ru</h2>
+          </a>
+        </div>
+        
+
+
+</footer>
 
 </body>
 </html>
