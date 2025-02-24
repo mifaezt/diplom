@@ -3,6 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\NewsController;
+   
+
+// Route::get("edit", [App\Http\Controllers\NewsController::class, 'edit'])->name('edit');
+Route::get('/admin/news/{id}/edit', [NewsController::class, 'edit'])->name('edit');
+   // Маршрут для приема данных(этот метод будет обрабатывать данные, отправленные из формы регистрации)
+   Route::post("sendnews", [App\Http\Controllers\NewsController::class, 'store'])->name('news.store');
+   Route::get('news', [NewsController::class, 'news'])->name('news');
+    // Маршрут для показа ленты новостей 
+//    Route::get("sendnews", [App\Http\Controllers\NewsController::class, 'store'])->name('user.store');
 
 
 // Маршрут показ формы welcomeBlade

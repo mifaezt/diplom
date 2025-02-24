@@ -34,11 +34,6 @@ class UserController extends Controller
     }
 
 
-    //Проверка админа
-    // public function isAdmin()
-    // {
-    //     return auth()->user()->email === 'mifaezt@gmail.com';
-    // }
     
 
     //Вид регистрации

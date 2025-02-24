@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
   <link rel="icon" href="{{ asset('icons/favicon.ico') }}">
+ 
   <title>@yield('title', 'Aframe')</title>
 </head>
 <body>
@@ -49,7 +50,7 @@
               <li><a href="{{ route('home') }}">Правила проживания</a></li>
               <li><a href="{{ route('home') }}">Цены</a></li>
               <li><a href="{{ route('home') }}">Чем заняться</a></li>
-              <li><a href="{{ route('home') }}">Новости</a></li>
+              <li><a href="{{ route('news') }}">Новости</a></li>
               <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
               @if (auth()->user()->email === 'mifaezt@gmail.com') <!-- доппроверка для ссылки -->
                 <li><a href="{{ route('adminPage') }}">Административная панель</a></li>
@@ -61,7 +62,7 @@
               <li><a href="{{ route('home') }}">Правила проживания</a></li>
               <li><a href="{{ route('home') }}">Цены</a></li>
               <li><a href="{{ route('home') }}">Чем заняться</a></li>
-              <li><a href="{{ route('home') }}">Новости</a></li>
+              <li><a href="{{ route('news') }}">Новости</a></li>
               <li><a href="{{ route('login') }}">Вход</a></li>
             @endif
           @endif
@@ -159,6 +160,5 @@
 
 
 </footer>
-
 </body>
 </html>

@@ -40,6 +40,7 @@
     justify-content: flex-end;
 }
 
+/* блок с предложениями */
 .serviceComponent {
     display: flex;
 }

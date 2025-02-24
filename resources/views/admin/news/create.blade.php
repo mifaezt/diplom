@@ -1,10 +1,3 @@
-<!-- Подключаем шаблон (шапка)-->
-@extends('layouts.main')
-<!-- yeld реализация -->
-@section('title', 'Админ')
-
-@section('content')
-
 <form action="{{ route('news.store') }}" method="POST">
        @csrf
        <div>
@@ -18,5 +11,3 @@
        <button type="submit">Добавить новость</button>
    </form>
    
-
-@endsection
