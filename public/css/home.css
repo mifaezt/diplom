@@ -44,13 +44,19 @@
     display: flex;
 }
 
-.serviceIcon {
+.serviceIcon img {
     height: 100px;
     width: 100px;
 }
 
+.serviceIcon img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .serviceFirstBlock {
     display: flex;
+    flex-direction: column;
 }
 .serviceSecondBlock {
     display: flex;

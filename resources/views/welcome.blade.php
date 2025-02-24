@@ -15,6 +15,7 @@
 <main class="container">
 <div class="serviceFirstBlock">
     <h2>Что входит</h2>
+    <div>
  <div class="serviceSecondBlock">
     <div class="serviceComponent">
         <div class="serviceIcon">
@@ -77,6 +78,7 @@
             Лето: Бадминтон, фрисби, дартс, два сапборда
             Зима: Тюбинг, ледянка, настольные игры</p>
         </div>
+    </div>
     </div>
 </div>
 </div>
