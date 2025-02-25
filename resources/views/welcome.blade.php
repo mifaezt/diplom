@@ -86,7 +86,7 @@
     </div>
 </div>
 
-<div class="homeView">
+<section class="homeView">
     <div class="blockInfo">Наш гостевой дом</div>
     <div class="gallery-container">
         <div class="gallery-item" data-target="outside">
@@ -102,7 +102,54 @@
             </a>
         </div>
     </div>
+</section>
+
+
+<section class="pricing-section">
+    <div class="container">
+        <div class="pricing-content">
+            <div class="pricing-text">
+                <h2>Цены</h2>
+                <p>Наши афрейм домики предлагают комфорт и уют по доступным ценам. Выберите подходящий вариант и наслаждайтесь отдыхом в гармонии с природой.</p>
+                <ul class="heart-list">
+                    <li> Будние дни — 11 000 р./ сутки</li>
+                    <li> Пятница — 12 000 р. / сутки</li>
+                    <li> Суббота — 15 000 р. / сутки</li>
+                    <li> Доп. гость — 1 500 р. с человека в сутки</li>
+                    <li> Заезд с 14:00, выезд до 11:00</li>
+                </ul>
+                <a href="#" class="btnPricing">Забронировать</a>
+                <p>*Цены динамические, могут меняться от сезона и спроса. Тарифы можно уточнить, нажав "Забронировать" или
+                по нмоеру телефон +79535389063</p>
+            </div>
+            <div class="pricing-image">
+                <img src="{{ asset('images/PricingImage.jpg') }}" alt="Афрейм домик">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+<swiper-container 
+navigation="true" 
+pagination="true"
+slides-per-view="2"
+  mousewheel-force-to-axis="true" >
+  <swiper-slide>
+  <div class="slider-block">
+    <div class="slider-item">
+        <img src="{{ asset('images/walkDog.jpg') }}" alt="Описание изображения" class="slider-image">
+        <div class="slider-description">
+            <h3>Заголовок слайда</h3>
+            <p>Краткое описание слайда. Это может быть текст о предложении, услуге или продукте.</p>
+        </div>
+    </div>
 </div>
+  </swiper-slide>
+  <swiper-slide>Slide 2</swiper-slide>
+  <swiper-slide>Slide 3</swiper-slide>
+</swiper-container>
+</section>
 
 </main>
 @endsection

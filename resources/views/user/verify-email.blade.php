@@ -8,7 +8,7 @@
     <div class="alert alert-info" role="alert">
         Спасибо за регистрацию! Ссылка на подтверждение аккаунта отправлена вам на электронную почту.
     </div>
-    <div>
+    <div class="form-container">
         Не получили ссылку?
         <form method="post" action="{{route('verification.send')}}">
             @csrf

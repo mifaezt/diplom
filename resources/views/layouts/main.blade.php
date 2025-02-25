@@ -144,8 +144,9 @@
         </div>
 
         <!-- Социальные иконки и ссылка -->
+
         <div class="footer-social">
-            <div class="social-icons">
+            <div class="social-icons-footer">
                 <a href="https://vk.com/" target="_blank" class="icon">
                     <img src="{{ asset('icons/vk.png') }}" alt="vk">
                 </a>
@@ -164,6 +165,10 @@
             </a>
         </div>
     </div>
+
 </footer>
+
+<script src="{{ asset('scripts/swiper.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>

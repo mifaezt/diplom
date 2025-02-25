@@ -144,7 +144,7 @@
 }
 
 .serviceDesc h3 {
-    font-size: 18px;
+    font-size: 24px;
     margin: 10px 0;
     color: var(--color-light);
 }
@@ -285,3 +285,111 @@
         font-size: 30px; /* Уменьшаем размер текста для мобильных */
     }
 }
+
+/* Pricing блок  Цены*/
+.pricing-section {
+    padding: 60px 20px;
+    background-color: var(--color-dark);
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.pricing-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.pricing-text {
+    max-width: 500px;
+}
+
+.pricing-text h2 {
+    font-size: 3rem;
+    color: var(--color-light);
+    margin-bottom: 20px;
+}
+
+.pricing-text p {
+    font-size: 1.1rem;
+    color: var(--color-light);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btnPricing {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.btnPricing:hover {
+    background-color: var(--color-after-light);
+}
+
+.pricing-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.heart-list {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding-left: 0; /* Убираем отступ слева */
+}
+
+.heart-list li {
+    position: relative;
+    padding-left: 25px; /* Отступ для сердечка */
+    margin-bottom: 10px; /* Отступ между пунктами */
+    font-size: 1.1rem;
+    color: var(--color-light);
+}
+
+.heart-list li::before {
+    content: "❤️ "; /* Используем символ сердечка */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #d37325; /* Цвет сердечка */
+    font-size: 1.2rem;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .pricing-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pricing-text {
+        max-width: 100%;
+    }
+
+    .pricing-text h2 {
+        font-size: 2rem;
+    }
+
+    .pricing-text p {
+        font-size: 1rem;
+    }
+
+    .btnPricing {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .pricing-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
+
+/* Slider */

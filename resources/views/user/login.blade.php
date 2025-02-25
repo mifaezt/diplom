@@ -26,8 +26,8 @@
                 <input name="remember" id="remember" type="checkbox">
 
             <div class="link">
-                <p>Нет аккаунта? <a href="{{ route('register') }}">Зарегистрироваться</a></p>
-                <a href="{{ route('password.request') }}" >Забыл?</a>
+                 <a href="{{ route('register') }}">Зарегистрироваться</a>
+                <a href="{{ route('password.request') }}" >Забыли логин или пароль?</a>
             </div>
         </form>
     </div>

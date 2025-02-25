@@ -71,14 +71,29 @@ body {
     background-color: pink;
 }
 
+.alert {
+    width: 300px;
+    margin: 20px auto;
+}
+
 .alert-danger {
-    border: 1px solid red;
-    background-color: pink;
+    background-color: #b82323; /* Цвет фона */
+    color: #155724; /* Цвет текста */
+    border-color: #ff0000; /* Цвет границы */
+    padding: 10px; /* Отступы */
+    border-radius: 4px; /* Скругление углов */
+    margin-bottom: 15px; /* Отступ снизу */
+    margin-top: 10px;
 }
 
 .alert-success {
-    border: 1px solid rgb(58, 247, 0);
-    background-color: pink;
+    background-color: #d4edda; /* Цвет фона */
+    color: #155724; /* Цвет текста */
+    border-color: #c3e6cb; /* Цвет границы */
+    padding: 10px; /* Отступы */
+    border-radius: 4px; /* Скругление углов */
+    margin-bottom: 15px; /* Отступ снизу */
+    margin-top: 10px;
 }
 
 h1,
