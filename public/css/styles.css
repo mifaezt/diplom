@@ -32,6 +32,7 @@
 :root {
     --color-dark-grey: #1a1f23;
     --color-light: #ffffff;
+    --color-after-light: #d1d1d1;
     --color-dark: #000000;
 
     --border-radius: 30px;

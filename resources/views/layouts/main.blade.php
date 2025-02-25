@@ -11,29 +11,31 @@
 <body>
  
 <header class="header">
-<nav class="navbar">
+    <nav class="navbar">
         <div class="navbar-content">
-            <a href="{{ route('home') }}" >
-              <img class="logo" 
-              src="{{ asset('images/logo.png') }}"  
-              alt="Jarviranta logo"
-              width="120"
-              height="120"
-              loading="lazy">
+            <a href="{{ route('home') }}">
+                <img class="logo" 
+                     src="{{ asset('images/logo.png') }}"  
+                     alt="Jarviranta logo"
+                     width="120"
+                     height="120"
+                     loading="lazy">
             </a>
-            <div class="slogan"> <h1>Ваш идеальный отдых начинается здесь <br> уют, природа и комфорт под одной крышей! </h1></div>
+            <div class="slogan">
+                <h1>Ваш идеальный отдых начинается здесь <br> уют, природа и комфорт под одной крышей!</h1>
+            </div>
             <div class="social-icons">
                 <a href="https://vk.com/" target="_blank" class="icon">
-                  <img src="{{ asset('icons/vk.png') }}"  alt="vk">
+                    <img src="{{ asset('icons/vk.png') }}" alt="vk">
                 </a>
                 <a href="https://blog.whatsapp.com/whats-app-web?lang=ru_RU" target="_blank" class="icon">
-                <img src="{{ asset('icons/whatsapp.png') }}" alt="whatsupp">
+                    <img src="{{ asset('icons/whatsapp.png') }}" alt="whatsapp">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" class="icon">
-                <img src="{{ asset('icons/instagram.png') }}" alt="instagram">
+                    <img src="{{ asset('icons/instagram.png') }}" alt="instagram">
                 </a>
                 <a href="https://web.telegram.org/" target="_blank" class="icon">
-                <img src="{{ asset('icons/telegram.png') }}" alt="telegram">
+                    <img src="{{ asset('icons/telegram.png') }}" alt="telegram">
                 </a>
             </div>
         </div>
@@ -41,34 +43,34 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
-          <!-- Условия маршрутов -->
-          @if (Route::has('login'))
-            @auth
-              <li><a href="{{ route('home') }}">Главная страница</a></li>
-              <li><a href="{{ route('about') }}">О нас</a></li>
-              <li><a href="{{ route('home') }}">Контакты</a></li>
-              <li><a href="{{ route('home') }}">Правила проживания</a></li>
-              <li><a href="{{ route('home') }}">Цены</a></li>
-              <li><a href="{{ route('home') }}">Чем заняться</a></li>
-              <li><a href="{{ route('news') }}">Новости</a></li>
-              <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
-              @if (auth()->user()->email === 'mifaezt@gmail.com') <!-- доппроверка для ссылки -->
-                <li><a href="{{ route('adminPage') }}">Административная панель</a></li>
+            @if (Route::has('login'))
+                @auth
+                    <li><a href="{{ route('home') }}">Главная страница</a></li>
+                    <li><a href="{{ route('about') }}">О нас</a></li>
+                    <li><a href="{{ route('home') }}">Контакты</a></li>
+                    <li><a href="{{ route('home') }}">Правила проживания</a></li>
+                    <li><a href="{{ route('home') }}">Цены</a></li>
+                    <li><a href="{{ route('home') }}">Чем заняться</a></li>
+                    <li><a href="{{ route('news') }}">Новости</a></li>
+                    <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
+                    @if (auth()->user()->email === 'mifaezt@gmail.com')
+                        <li><a href="{{ route('adminPage') }}">Административная панель</a></li>
+                    @endif
+                @else
+                    <li><a href="{{ route('home') }}">Главная страница</a></li>
+                    <li><a href="{{ route('about') }}">О нас</a></li>
+                    <li><a href="{{ route('home') }}">Контакты</a></li>
+                    <li><a href="{{ route('home') }}">Правила проживания</a></li>
+                    <li><a href="{{ route('home') }}">Цены</a></li>
+                    <li><a href="{{ route('home') }}">Чем заняться</a></li>
+                    <li><a href="{{ route('news') }}">Новости</a></li>
+                    <li><a href="{{ route('login') }}">Вход</a></li>
+                @endif
             @endif
-            @else
-              <li><a href="{{ route('home') }}">Главная страница</a></li>
-              <li><a href="{{ route('about') }}">О нас</a></li>
-              <li><a href="{{ route('home') }}">Контакты</a></li>
-              <li><a href="{{ route('home') }}">Правила проживания</a></li>
-              <li><a href="{{ route('home') }}">Цены</a></li>
-              <li><a href="{{ route('home') }}">Чем заняться</a></li>
-              <li><a href="{{ route('news') }}">Новости</a></li>
-              <li><a href="{{ route('login') }}">Вход</a></li>
-            @endif
-          @endif
         </ul>
     </nav>
-    </header>
+</header>
+
 <!-- Основной контент -->
 <main>
   <div class="container">
@@ -100,65 +102,68 @@
 
 </main>
 
-<footer>
-
-        <div>
-          <a href="{{ route('home') }}" >
-              <img class="logo" 
-              src="{{ asset('images/logo.png') }}"  
-              alt="Jarviranta logo"
-              width="120"
-              height="120"
-              loading="lazy">
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Логотип -->
+        <div class="footer-logo">
+            <a href="{{ route('home') }}">
+                <img class="logo" 
+                     src="{{ asset('images/logo.png') }}"  
+                     alt="Jarviranta logo"
+                     width="120"
+                     height="120"
+                     loading="lazy">
             </a>
-          </div>
-
-        <div>
-          <ul>
-            <li><a href="{{ route('about') }}">О нас</a></li>
-            <li><a href="{{ route('home') }}">Правила проживания</a></li>
-            <li><a href="{{ route('home') }}">Цены</a></li>
-          </ul>
         </div>
 
-        <div>
-          <ul>
-            <li><a href="{{ route('home') }}">Чем заняться</a></li>
-            <li><a href="{{ route('home') }}">Новости</a></li>
-            <li><a href="{{ route('home') }}">Правила проживания</a></li>
-          </ul>
+        <!-- Меню 1 -->
+        <div class="footer-menu">
+            <ul>
+                <li><a href="{{ route('about') }}">О нас</a></li>
+                <li><a href="{{ route('home') }}">Правила проживания</a></li>
+                <li><a href="{{ route('home') }}">Цены</a></li>
+            </ul>
         </div>
 
-        <div>
-          <ul>
-            <li><a href="{{ route('home') }}">Дом внутри</a></li>
-            <li><a href="{{ route('home') }}">Дом снаружи</a></li>
-            <li><a href="{{ route('home') }}">Очень ждем вас в гости!</a></li>
-          </ul>
+        <!-- Меню 2 -->
+        <div class="footer-menu">
+            <ul>
+                <li><a href="{{ route('home') }}">Чем заняться</a></li>
+                <li><a href="{{ route('home') }}">Новости</a></li>
+                <li><a href="{{ route('home') }}">Правила проживания</a></li>
+            </ul>
         </div>
 
-        <div>
-          <div class="social-icons">
-            <a href="https://vk.com/" target="_blank" class="icon">
-              <img src="{{ asset('icons/vk.png') }}"  alt="vk">
-            </a>
-            <a href="https://blog.whatsapp.com/whats-app-web?lang=ru_RU" target="_blank" class="icon">
-              <img src="{{ asset('icons/whatsapp.png') }}" alt="whatsupp">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" class="icon">
-              <img src="{{ asset('icons/instagram.png') }}" alt="instagram">
-            </a>
-            <a href="https://web.telegram.org/" target="_blank" class="icon">
-              <img src="{{ asset('icons/telegram.png') }}" alt="telegram">
-            </a>
-          </div>
-          <a href="#">
-          <h2>Jarvira.ru</h2>
-          </a>
+        <!-- Меню 3 -->
+        <div class="footer-menu">
+            <ul>
+                <li><a href="{{ route('home') }}">Дом внутри</a></li>
+                <li><a href="{{ route('home') }}">Дом снаружи</a></li>
+                <li><a href="{{ route('home') }}">Очень ждем вас в гости!</a></li>
+            </ul>
         </div>
-        
 
-
+        <!-- Социальные иконки и ссылка -->
+        <div class="footer-social">
+            <div class="social-icons">
+                <a href="https://vk.com/" target="_blank" class="icon">
+                    <img src="{{ asset('icons/vk.png') }}" alt="vk">
+                </a>
+                <a href="https://blog.whatsapp.com/whats-app-web?lang=ru_RU" target="_blank" class="icon">
+                    <img src="{{ asset('icons/whatsapp.png') }}" alt="whatsapp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="icon">
+                    <img src="{{ asset('icons/instagram.png') }}" alt="instagram">
+                </a>
+                <a href="https://web.telegram.org/" target="_blank" class="icon">
+                    <img src="{{ asset('icons/telegram.png') }}" alt="telegram">
+                </a>
+            </div>
+            <a class="footerMainLink" href="#">
+                <h2>Jarvira.ru</h2>
+            </a>
+        </div>
+    </div>
 </footer>
 </body>
 </html>

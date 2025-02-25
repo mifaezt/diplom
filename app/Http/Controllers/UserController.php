@@ -51,6 +51,16 @@ class UserController extends Controller
         return view('about');
     }
 
+    // Вид Дом внутри
+    public function inside() {
+        return view('inside');
+    }
+
+    // Вид Дом снаружи
+    public function outside() {
+        return view('outside');
+    }
+
     //Вид кабинет 
     public function userCabinet() {
         return view('user.userCabinet');

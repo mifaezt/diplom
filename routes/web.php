@@ -23,6 +23,13 @@ Route::get('/', function () {
 // Маршрут показ формы онас
 Route::get("about", [App\Http\Controllers\UserController::class, 'about'])->name('about');
 
+// Маршрут показ Дом внутри
+Route::get("inside", [App\Http\Controllers\UserController::class, 'inside'])->name('inside');
+
+// Маршрут показ Домснаружи
+Route::get("outside", [App\Http\Controllers\UserController::class, 'outside'])->name('outside');
+
+
 // Группировка гостя
 Route::middleware('guest')->group(function(){
 
