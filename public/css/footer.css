@@ -46,6 +46,11 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons-footer:hover {
+    transform: scale(1.2) rotate(10deg); /* Увеличение и вращение */
 }
 
 .social-icons-footer .icon img {
