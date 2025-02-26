@@ -57,6 +57,7 @@
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px); /* Эффект поднятия кнопки */
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 
 .button-link-container {
@@ -335,6 +336,7 @@
 
 .btnPricing:hover {
     background-color: var(--color-dark);
+    transform: scale(1.05);
 }
 
 .pricing-image img {
@@ -558,6 +560,7 @@ swiper-container::part(bullet-active) {
 
 .route-button:hover {
     background-color: var(--color-dark); /* Цвет при наведении */
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

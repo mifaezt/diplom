@@ -78,14 +78,22 @@ body {
     transform: translateY(0); /* Возврат на место */
 }
 
+.gradient-section {
+    background: linear-gradient(45deg, #3f3f3f, #9c9c9c);
+    transition: background 0.5s ease;
+}
+
+.gradient-section:hover {
+    background: linear-gradient(45deg, #fad0c4, #333333);
+}
 /* паралакс? */
 /* .parallax-section {
     background-image: url("../images/walkDog.jpg");
-    background-attachment: fixed; 
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh; 
+    height: 100vh;
 } */
 
 .is-invalid {

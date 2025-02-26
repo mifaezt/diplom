@@ -18,7 +18,7 @@
 </section>
 
 <section class="section">
-<div class="serviceFirstBlock container">
+<div class="serviceFirstBlock container gradient-sections">
     <h2 class="blockInfo">Что входит</h2>
 
     <div class="serviceSecondBlock">
