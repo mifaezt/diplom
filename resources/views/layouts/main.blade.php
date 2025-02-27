@@ -9,6 +9,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
  
   <title>@yield('title', 'Aframe')</title>
 </head>
@@ -51,10 +52,10 @@
                 @auth
                     <li><a href="{{ route('home') }}">Главная страница</a></li>
                     <li><a href="{{ route('about') }}">О нас</a></li>
-                    <li><a href="{{ route('home') }}">Контакты</a></li>
-                    <li><a href="{{ route('home') }}">Правила проживания</a></li>
-                    <li><a href="{{ route('home') }}">Цены</a></li>
-                    <li><a href="{{ route('home') }}">Чем заняться</a></li>
+                    <li><a href="{{ route('home') }}#contacts">Контакты</a></li>
+                    <li><a href="{{ route('aframeRules') }}">Правила проживания</a></li>
+                    <li><a href="{{ route('home') }}#prices">Цены</a></li>
+                    <li><a href="{{ route('home') }}#whatDo">Чем заняться</a></li>
                     <li><a href="{{ route('news') }}">Новости</a></li>
                     <li><a href="{{ route('userCabinet') }}">Личный кабинет</a></li>
                     @if (auth()->user()->email === 'mifaezt@gmail.com')
@@ -63,10 +64,10 @@
                 @else
                     <li><a href="{{ route('home') }}">Главная страница</a></li>
                     <li><a href="{{ route('about') }}">О нас</a></li>
-                    <li><a href="{{ route('home') }}">Контакты</a></li>
-                    <li><a href="{{ route('home') }}">Правила проживания</a></li>
-                    <li><a href="{{ route('home') }}">Цены</a></li>
-                    <li><a href="{{ route('home') }}">Чем заняться</a></li>
+                    <li><a href="{{ route('home') }}#contacts">Контакты</a></li>
+                    <li><a href="{{ route('aframeRules') }}">Правила проживания</a></li>
+                    <li><a href="{{ route('home') }}#prices">Цены</a></li>
+                    <li><a href="{{ route('home') }}#whatDo">Чем заняться</a></li>
                     <li><a href="{{ route('news') }}">Новости</a></li>
                     <li><a href="{{ route('login') }}">Вход</a></li>
                 @endif
@@ -125,14 +126,14 @@
             <ul>
                 <li><a href="{{ route('about') }}">О нас</a></li>
                 <li><a href="{{ route('home') }}">Правила проживания</a></li>
-                <li><a href="{{ route('home') }}">Цены</a></li>
+                <li><a href="{{ route('home') }}#prices">Цены</a></li>
             </ul>
         </div>
 
         <!-- Меню 2 -->
         <div class="footer-menu">
             <ul>
-                <li><a href="{{ route('home') }}">Чем заняться</a></li>
+                <li><a href="{{ route('home') }}#whatDo">Чем заняться</a></li>
                 <li><a href="{{ route('home') }}">Новости</a></li>
                 <li><a href="{{ route('home') }}">Правила проживания</a></li>
             </ul>
@@ -171,6 +172,7 @@
     </div>
 
 </footer>
+<script src="{{ asset('scripts/smooth.js') }}"></script>
 <script src="{{ asset('scripts/view.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 

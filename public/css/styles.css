@@ -4,6 +4,8 @@
 @import url("header.css");
 @import url("home.css");
 @import url("footer.css");
+@import url("about.css");
+@import url(interior.css);
 
 @font-face {
     font-family: "Rubik";
@@ -78,14 +80,14 @@ body {
     transform: translateY(0); /* Возврат на место */
 }
 
-.gradient-section {
+/* .gradient-section {
     background: linear-gradient(45deg, #3f3f3f, #9c9c9c);
     transition: background 0.5s ease;
 }
 
 .gradient-section:hover {
     background: linear-gradient(45deg, #fad0c4, #333333);
-}
+} */
 /* паралакс? */
 /* .parallax-section {
     background-image: url("../images/walkDog.jpg");

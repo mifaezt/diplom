@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\InteriorController;
    
 
 // Route::get("edit", [App\Http\Controllers\NewsController::class, 'edit'])->name('edit');
@@ -19,6 +20,12 @@ Route::get('/admin/news/{id}/edit', [NewsController::class, 'edit'])->name('edit
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+// Маршрут для вкладки Внутри
+Route::get('/interior', [InteriorController::class, 'show'])->name('interior');
+
+// Наши правила
+Route::get("aframeRules", [App\Http\Controllers\UserController::class, 'aframeRules'])->name('aframeRules');
 
 // Маршрут показ формы онас
 Route::get("about", [App\Http\Controllers\UserController::class, 'about'])->name('about');

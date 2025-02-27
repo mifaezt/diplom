@@ -10,7 +10,7 @@
     <div class="homeSlogan">
         <h1>Отдохните от суеты в гостевом А-фрейм домике на берегу живописного озера в Карелии!</h1>
         <div class="button-link-container">
-            <a href="#" class="button-link">ЗАБРОНИРОВАТЬ</a>
+            <a href="#contacts" class="button-link">ЗАБРОНИРОВАТЬ</a>
         </div>
     </div>
 </div>
@@ -112,7 +112,7 @@
 </section>
 
 
-<section class="section">
+<section id="prices" class="section">
     <div class=" pricing-section container">
         <div class="pricing-content">
             <div class="pricing-text">
@@ -125,7 +125,7 @@
                     <li> Доп. гость — 1 500 р. с человека в сутки</li>
                     <li> Заезд с 14:00, выезд до 11:00</li>
                 </ul>
-                <a href="#" class="btnPricing">Забронировать</a>
+                <a href="#contacts" class="btnPricing">Забронировать</a>
                 <p>*Цены динамические, могут меняться от сезона и спроса. Тарифы можно уточнить, нажав "Забронировать" или
                 по нмоеру телефон +79535389063</p>
             </div>
@@ -137,7 +137,7 @@
 </section>
 
 <!-- Ckfqlth -->
-<section class="section">
+<section id="whatDo" class="section">
     <div class="container">
 <h2 class="blockInfo">Досуг</h2>
   <swiper-container 
@@ -225,7 +225,7 @@
 </section>
 
 <!-- Как добраться -->
- <section class="section">
+ <section id="contacts" class="section">
     <div class="container">
  <h2 class="blockInfo">Как добраться и контакты</h2>
 <div class="how-to-get">
@@ -236,7 +236,7 @@
         </div>
     </div>
     <div class="info-container">
-        <h2>Всегда рады новым гостям</h2>
+        <h2>Для бронирования свяжитесь с нами!</h2>
         <p class="address">Адрес: 
 СНТ Пелдожское, 1, Святозерское сельское поселение, Пряжинский район, Республика Карелия
 </p>
