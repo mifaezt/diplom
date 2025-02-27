@@ -172,6 +172,8 @@
     </div>
 
 </footer>
+
+<script src="{{ asset('scripts/interior.js') }}"></script>
 <script src="{{ asset('scripts/smooth.js') }}"></script>
 <script src="{{ asset('scripts/view.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

@@ -51,13 +51,12 @@ class UserController extends Controller
         return view('about');
     }
 
-    public function aframeRules() {
-        return view('aframeRules');
-    }
-
-    // Вид Дом внутри
     public function inside() {
         return view('inside');
+    }
+
+    public function aframeRules() {
+        return view('aframeRules');
     }
 
     // Вид Дом снаружи

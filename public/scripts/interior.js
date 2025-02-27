@@ -1,9 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".interior-card");
+    const blocks = document.querySelectorAll(".interior-block");
 
-    cards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add("animate__animated", "animate__fadeInUp");
-        }, index * 200); // Задержка для каждой карточки
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("interior-fade-in");
+                    observer.unobserve(entry.target); // Останавливаем наблюдение после появления
+                }
+            });
+        },
+        {
+            threshold: 0.1, // Блок появится, когда 10% его будет видно
+        }
+    );
+
+    blocks.forEach((block) => {
+        observer.observe(block);
     });
 });
