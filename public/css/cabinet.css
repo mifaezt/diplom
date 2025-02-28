@@ -1,0 +1,20 @@
+.profile-section,
+.booking-section {
+    background-color: var(--color-dark);
+    padding: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.profile-section h2,
+.booking-section h2 {
+    margin-top: 0;
+}
+.booking-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.booking-item:last-child {
+    border-bottom: none;
+}
